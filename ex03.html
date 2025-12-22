@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        fu f1(){
+        let div =document.getElementById
+        console.log( div )
+        div.innerHTML = "내용 추가"
+    }
+    </script>
+    <script>
+        function init(){
+            let div =document.getElementById("div1")
+            console.log( div )
+            let name = "김개똥";
+            let age = "30";
+            let msg = `
+                <b>저의 이름은</b> 홍길동 입니다<br>
+                나이는 20살 입니다
+            `;
+            /*
+            let msg = "<b>저의 이름은</b> : " + name + " 입니다<br>";
+            msg = msg + "나이는 : " + age + "살 입니다";
+            */
+            
+            msg = msg + "나이는 :" + age + "살 입니다";
+
+            div.innerHTML = msg
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div id="div1"></div>
+
+</body>
+</html>
