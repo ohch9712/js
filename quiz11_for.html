@@ -5,8 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
+    let selfId = 0;
+    //function trFunc(tr){}
+    const trFunc = ( tr ) => {
+      for(let i=1 ; i <= 2 ; i++){
+        document.getElementById( i ).style.backgroundColor = ""
+      }
+      console.log( tr )
+      if(selfId != tr.id){
+        tr.style.backgroundColor = "yellow"
+        selfId(0) != tr.id;
+      }else{
+        tr.style.backgroundColor = "";
+        selfId = 0;
+      }
+    }
     //function init(){}
-    const init = () ={
+    const init = () => {
+      const table = document.getElementById("table")
+      let msg = ""; 
+      msg = ``
+      <table border="1">
+        <tr>
+          <th>아이디</th><th>이름</th>
+        </tr>
+
+
+      for(let i=1 ; i <=2 ; i++){}
+        msg += `
+          <tr>
+            <td>${i}.반복id</td><td>반복이름</td>
+          </tr>
+        `;
+        console.log("처음 msg : ", msg)
+        for(let i=1 ; i <=2 ; i++ ){
+          msg += `
+            <tr onclick="trFunc(this)">
+              <td>${i}.반복id</td><td>반복이름</td>
+            </tr>
+          `;
+        }
+        console.log("반복 후 msg : ", msg)
+
+        msg += "</table>";
+        console.log("테이블 닫기 msg : ", msg)
+
+        table
+
+      /*
+      //alert("실행")
+      const table = document.getElemenById("table")
       let msg ="";
       for(let i=1 ; i <= 7 ; i++ ){
         msg += `
@@ -25,6 +73,8 @@
           ${msg}
         </table>
       `;
+    */
+
     }
 
   </script>
