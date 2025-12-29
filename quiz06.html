@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="border: 2px solid black; width: 168px; height:150px; padding: 10px;">
+    <input type="text" id="userId" placeholder="input id">
+    
+    <input type="text" id="pwd" placeholder="input password">
+    <input type="text" id="pwd_check" placeholder="password check">
+    <input type="text" id="name" placeholder="input name"><br>
+    <div id="msg"></div>
+    <input type="button" value="가입" onclick="check()">
+  </div>
+  <script>
+    //let idValue = document.getElementById("userId").value
+    if(document.getElementById("userId").value == ""){
+      document.getElementById("msg").innerHTML = "id 필수 항목";
+      
+    }
+  </script>
+  
+
+</body>
+</html>
